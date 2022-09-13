@@ -14,7 +14,7 @@ export class Company {
   companyName: string;
   telephoneNumber: string;
   employees: EnumEmployees;
-  cocNumber: string;
+  cocNumber: number;
   vatNumber: string;
   ibanNumber: string;
   budget: number;
@@ -23,7 +23,7 @@ export class Company {
 
 
   constructor(companyName = '', telephoneNumber = '', employees = EnumEmployees.NOTSET,
-              cocNumber = '', vatNumber = '', ibanNumber = '', budget = 0, description = '') {
+              cocNumber = 0, vatNumber = '', ibanNumber = '', budget = 0, description = '') {
     this.companyName = companyName
     this.telephoneNumber = telephoneNumber
     this.employees = employees

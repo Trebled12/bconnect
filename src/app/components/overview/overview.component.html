@@ -34,11 +34,12 @@
   <br>
 
   <h5 class="d-flex justify-content-end">Description</h5>
-  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.description">
+  <textarea class="w-100 rounded" rows="4" cols="50" [maxLength]="1000" [(ngModel)]="currentCompany.description"></textarea>
 
   <br>
 
-  <button class="btn-secondary" [disabled]="checkNeededValues()">Save</button>
+  <button class="btn-secondary" [disabled]="checkNeededValues()" (click)="logModel()">Save</button>
+  <button class="btn-secondary" (click)="checkCocNumber()">test</button>
 
 </div>
 
