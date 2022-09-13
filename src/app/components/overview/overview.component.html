@@ -1,1 +1,38 @@
-<p>overview works!</p>
+<h2>Company Details</h2>
+
+<br>
+<div class="dflex">
+
+  <h5>Company name</h5>
+  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.companyName">
+
+  <h5>Telephone number</h5>
+  <input class="w-100 rounded" type="number">
+  <h5>Employees</h5>
+  <select>
+    <option>1-10</option>
+    <option>11-20</option>
+    <option>21-50</option>
+    <option>51-300</option>
+    <option>300+</option>
+  </select>
+
+  <h5>CoC number</h5>
+  <input class="w-100 rounded" type="text">
+  <h5>VAT number</h5>
+  <input class="w-100 rounded" type="text">
+  <h5>IBAN number</h5>
+  <input class="w-100 rounded" type="text">
+  <h5>Budget</h5>
+  € <input class="w-100 rounded" type="number">
+
+  <br>
+
+  <h5 class="d-flex justify-content-end">Description</h5>
+  <input class="w-100 rounded" type="text">
+
+
+  <button class="btn-secondary">Save</button>
+
+</div>
+
