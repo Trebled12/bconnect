@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Company, EnumEmployees} from "../../models/company";
 import {ServicecallsService} from "../services/servicecalls.service";
+import {shareReplay} from "rxjs";
 
 @Component({
   selector: 'app-overview',
@@ -26,8 +27,8 @@ export class OverviewComponent implements OnInit {
       this.currentCompany.vatNumber.trim().length == 0 ||
       this.currentCompany.ibanNumber.trim().length == 0 ||
       this.currentCompany.description.trim().length == 0 ||
-      !this.checkIbanNumber() ||
-      !this.checkPhoneNumber()
+      !this.checkIbanNumber()
+      // !this.checkPhoneNumber()
   }
 
   logModel() {
@@ -47,11 +48,12 @@ export class OverviewComponent implements OnInit {
   }
 
   checkCocNumber() {
-    this.serviceCalls.getRestCoc(this.currentCompany.cocNumber).subscribe(value => {
-      console.log(value)
+    this.serviceCalls.getRestCoc().subscribe(value => {
+      console.warn(value)
     }, error => {
       console.warn(error)
     })
+
   }
 
 

@@ -4,10 +4,10 @@
 <div class="dflex">
 
   <h5>Company name</h5>
-  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.companyName">
+  <input class="mat-input-element rounded" type="text" [(ngModel)]="currentCompany.companyName">
 
   <h5>Telephone number</h5>
-  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.telephoneNumber">
+  <input class="w-100 rounded" placeholder="ex. 0201234567" [maxlength]="11" type="text" [(ngModel)]="currentCompany.telephoneNumber">
 
 
   <h5>Employees</h5>
@@ -20,13 +20,13 @@
   </select>
 
   <h5>CoC number</h5>
-  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.cocNumber">
+  <input class="w-100 rounded" type="text" placeholder="an 8 digit number" [defaultValue]="" [maxlength]="8" [(ngModel)]="currentCompany.cocNumber">
 
   <h5>VAT number</h5>
   <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.vatNumber">
 
   <h5>IBAN number</h5>
-  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.ibanNumber">
+  <input class="w-100 rounded" style="width: 200px" type="text" placeholder="ex NL93INGB0000737363" [(ngModel)]="currentCompany.ibanNumber">
 
   <h5>Budget</h5>
   € <input class="w-100 rounded" type="number" [(ngModel)]="currentCompany.budget">
@@ -34,12 +34,11 @@
   <br>
 
   <h5 class="d-flex justify-content-end">Description</h5>
-  <textarea class="w-100 rounded" rows="4" cols="50" [maxLength]="1000" [(ngModel)]="currentCompany.description"></textarea>
+  <textarea class="w-100 rounded" rows="4" cols="50"  placeholder="describe the company" [maxLength]="1000" [(ngModel)]="currentCompany.description"></textarea>
 
   <br>
 
-  <button class="btn-secondary" [disabled]="checkNeededValues()" (click)="logModel()">Save</button>
-  <button class="btn-secondary" (click)="checkCocNumber()">test</button>
+  <button class="" [disabled]="checkNeededValues()" (click)="logModel()">Save</button>
 
 </div>
 
