@@ -7,9 +7,11 @@
   <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.companyName">
 
   <h5>Telephone number</h5>
-  <input class="w-100 rounded" type="number">
+  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.telephoneNumber">
+
+
   <h5>Employees</h5>
-  <select>
+  <select [(ngModel)]="currentCompany.employees">
     <option>1-10</option>
     <option>11-20</option>
     <option>21-50</option>
@@ -18,21 +20,25 @@
   </select>
 
   <h5>CoC number</h5>
-  <input class="w-100 rounded" type="text">
+  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.cocNumber">
+
   <h5>VAT number</h5>
-  <input class="w-100 rounded" type="text">
+  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.vatNumber">
+
   <h5>IBAN number</h5>
-  <input class="w-100 rounded" type="text">
+  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.ibanNumber">
+
   <h5>Budget</h5>
-  € <input class="w-100 rounded" type="number">
+  € <input class="w-100 rounded" type="number" [(ngModel)]="currentCompany.budget">
 
   <br>
 
   <h5 class="d-flex justify-content-end">Description</h5>
-  <input class="w-100 rounded" type="text">
+  <input class="w-100 rounded" type="text" [(ngModel)]="currentCompany.description">
 
+  <br>
 
-  <button class="btn-secondary">Save</button>
+  <button class="btn-secondary" [disabled]="checkNeededValues()">Save</button>
 
 </div>
 
